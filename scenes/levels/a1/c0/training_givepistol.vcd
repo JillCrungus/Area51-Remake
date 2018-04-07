@@ -1,0 +1,69 @@
+// Choreo version 1
+actor "training_pistolgiver"
+{
+  channel "Audio"
+  {
+    event speak "SayLine"
+    {
+      time 0.253333 4.294875
+      param "npc_dreamland_soldier.a1c0.training_givepistol"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "LookCole"
+    {
+      time 1.492618 4.299285
+      param "!player"
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "GivePistol"
+    {
+      time 3.273095 4.059762
+      param "g_point_l"
+      absolutetags playback_time
+      {
+        "in" 0.073447
+        "loop" 0.345865
+        "end" 0.714286
+        "out" 0.857143
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.081967
+        "loop" 0.508197
+        "end" 0.639344
+        "out" 0.836066
+      }
+      sequenceduration 2.066667
+    }
+  }
+  channel "MapTrigger"
+  {
+    event firetrigger "SpawnPistolRelay"
+    {
+      time 3.928572 -1.000000
+      param "1"
+    }
+  }
+  channel "Emote"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "112"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off
